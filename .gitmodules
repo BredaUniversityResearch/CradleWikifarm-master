@@ -171,3 +171,7 @@
 [submodule "extensions/MetaDescriptionTag"]
 	path = extensions/MetaDescriptionTag
 	url = git@github.com:kolzchut/mediawiki-extensions-MetaDescriptionTag.git
+[submodule "extensions/Moderation"]
+	path = extensions/Moderation
+	url = git@github.com:edwardspec/mediawiki-moderation.git
+	branch = REL1_27
