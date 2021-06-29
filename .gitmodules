@@ -145,3 +145,6 @@
 	path = extensions/HitCounters
 	url = git@github.com:wikimedia/mediawiki-extensions-HitCounters.git
 	branch = REL1_34
+[submodule "extensions/InteractiveTimeline"]
+	path = extensions/InteractiveTimeline
+	url = git@github.com:TheWatcher/InteractiveTimeline.git
