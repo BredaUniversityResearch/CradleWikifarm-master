@@ -1,0 +1,37 @@
+{
+	"name": "MSPAuthoriser",
+	"author": "Harald Warmelink & Dragomir Mitev",
+	"url": "",
+	"description": "This extension makes your wiki use the https://auth.mspchallenge.info API for logging users in and redirecting users for account registration.",
+	"version": "1.0",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"manifest_version": 2,
+ 	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\MSPAuthoriser\\": "includes/"
+	},
+  	"MessagesDirs": {
+		"MSPAuthoriser": [
+			"i18n"
+		]
+	},
+	"Hooks": {
+		"PersonalUrls": "MediaWiki\\Extension\\MSPAuthoriser\\Hooks::onPersonalUrls"
+	},
+	"config": {
+		"PluggableAuth_Class": {
+			"value": "MediaWiki\\Extension\\MSPAuthoriser\\PluggableAuth"
+		}
+	},
+	"ResourceModules": {
+		"x.MSPAuthoriser.styles": {
+			"styles": [
+				"x.mystyles.css"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "MSPAuthoriser"
+	}
+}

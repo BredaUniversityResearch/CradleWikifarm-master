@@ -1,0 +1,44 @@
+{
+  "name": "JiraConnector",
+  "version": "0.0.0",
+  "author": ["Your Name"],
+  "url": "https://www.mediawiki.org/wiki/Extension:JiraConnector",
+  "descriptionmsg": "myextension-desc",
+  "license-name": "MIT",
+  "type": "other",
+  "AutoloadClasses": {
+    "SpecialJiraConnector": "src/Special.php"
+  },
+  "SpecialPages": {
+    "JiraConnector": "SpecialJiraConnector"
+  },
+  "MessagesDirs": {
+    "JiraConnector": ["i18n"]
+  },
+  "manifest_version": 2,
+  "config": {
+    "JiraConnector_Jira_ProjectID": {
+			"value": "", 
+			"description": "The Jira Project ID concerned."
+		},
+    "JiraConnector_Jira_URL": {
+			"value": "",
+			"description": "The base URL of Jira's API."
+		},
+    "JiraConnector_Jira_Label": {
+			"value": "",
+			"description": "The label to use when getting and posting Jira issues within the specified project (can be empty to get all)."
+		},
+		"JiraConnector_Jira_User": {
+			"value": "",
+			"description": "The Jira username to use in the basic authentication."
+		},
+    "JiraConnector_Jira_Pass": {
+			"value": "",
+			"description": "The Jira password to use in the basic authentication."
+		}
+	},
+	"ConfigRegistry": {
+		"JiraConnector": "GlobalVarConfig::newInstance"
+	}
+}

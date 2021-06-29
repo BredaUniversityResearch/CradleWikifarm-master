@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Harald"
+		]
+	},
+	"jiraconnector": "The name of the extension's entry in Special:SpecialPages",
+	"jiraconnector-desc": "{{desc}}",
+	"jiraconnector-summary": "Description appearing on top of Special:JiraConnector.",
+	"action-jiraconnector": "{{doc-action|jiraconnector}}",
+	"right-jiraconnector": "{{doc-right|jiraconnector}}",
+	"-jiraformsection1": "Submit a bug report or feature request"
+}

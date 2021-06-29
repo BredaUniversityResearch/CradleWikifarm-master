@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Harald"
+		]
+	},
+	"jiraconnector": "Jira Connector",
+	"jiraconnector-desc": "Adds the JiraConnector functionality.",
+	"jiraconnector-summary": "On this special page, do this simple thing and earn wonders.",
+	"group-jiraconnectorrole": "Role of jiraconnector",
+	"group-jiraconnectorrole-member": "Member of role of jiraconnector",
+	"grouppage-jiraconnectorrole": "{{ns:project}}:Role of jiraconnector",
+	"action-jiraconnector": "XYZ doing.",
+	"right-jiraconnector": "to do xyz",
+	"-jiraformsection1": "Submit a bug report or feature request"
+}

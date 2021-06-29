@@ -1,0 +1,61 @@
+.firstHeading {background-color: #454546}
+ @import url("https://fonts.googleapis.com/css?family=Roboto");
+
+@font-face {
+font-family: 'Roboto';
+src: url('/skins/Tweeki/roboto/Roboto-Regular.ttf')  format('truetype');
+src: url('/skins/Tweeki/roboto/Roboto-Regular.woff')  format('woff');
+src: url('/skins/Tweeki/roboto/Roboto-Regular.woff2')  format('woff2');
+}
+body {font-family: 'Roboto'}
+body {font-weight: normal}
+
+body {background-color: #595958}
+body {color: #f9f9f9}
+.searchresult { color:#f9f9f9 !important; }
+
+textarea {color: #454546}
+
+.nav-tabs>li.active>a {background-color: #595958; color: #f9f9f9}
+
+.nav-tabs>li.active>a:hover {background-color: #595958; color: #f9f9f9}
+
+.nav-tabs>li.active>a:focus {background-color: #595958; color: #f9f9f9}
+
+.nav-tabs>li>a {color: #f9f9f9}
+
+.nav-tabs>li>a:hover {color: #454546}
+
+a {color: #0ED2F7}
+a:hover {color: #B2FEFA}
+
+.mw-redirectsub {color: #FFFFFF}
+.redirectsub {color: #FFFFFF}
+.mw-redirectedfrom {color: #FFFFFF}
+
+
+.ui-widget-content { 
+	color: #f9f9f9 !important;
+}
+
+.ui-state-default:hover {
+    background: #ffffff !important;
+    color: #595958 !important;
+}
+
+.ui-state-active, .ui-state-default, .ui-state-active:hover {
+    background: #595958 !important;
+    color: #ffffff !important;
+}
+
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited, .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+    color: #ffffff !important;
+}
+
+.ui-state-default a:hover {
+    color: #595958 !important;
+}
+
+.ui-state-active a:hover {
+    color: #ffffff !important;
+}

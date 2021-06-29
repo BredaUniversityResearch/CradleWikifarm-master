@@ -1,3 +1,7 @@
+This folder contains only Cradle-develop extensions by default.
+All other extensions are linked here as submodules.
+
+
 == User Information ==
 
 Extensions are distributed separately. Drop them into this directory and enable
