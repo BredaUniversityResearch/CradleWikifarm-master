@@ -122,3 +122,7 @@
 	path = extensions/AdminLinks
 	url = git@github.com:wikimedia/mediawiki-extensions-AdminLinks.git
 	branch = REL1_34
+[submodule "extensions/Comments"]
+	path = extensions/Comments
+	url = git@github.com:wikimedia/mediawiki-extensions-Comments.git
+	branch = REL1_34
