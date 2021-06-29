@@ -118,3 +118,7 @@
 	path = extensions/AccessControl
 	url = git@github.com:wikimedia/mediawiki-extensions-AccessControl.git
 	branch = REL1_34
+[submodule "extensions/AdminLinks"]
+	path = extensions/AdminLinks
+	url = git@github.com:wikimedia/mediawiki-extensions-AdminLinks.git
+	branch = REL1_34
