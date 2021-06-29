@@ -186,3 +186,7 @@
 	path = extensions/PluggableAuth
 	url = git@github.com:wikimedia/mediawiki-extensions-PluggableAuth.git
 	branch = REL1_34
+[submodule "extensions/Popups"]
+	path = extensions/Popups
+	url = git@github.com:wikimedia/mediawiki-extensions-Popups.git
+	branch = REL1_34
