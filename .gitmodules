@@ -164,3 +164,7 @@
 	path = extensions/Lockdown
 	url = git@github.com:wikimedia/mediawiki-extensions-Lockdown.git
 	branch = REL1_34
+[submodule "extensions/Math"]
+	path = extensions/Math
+	url = git@github.com:wikimedia/mediawiki-extensions-Math.git
+	branch = REL1_34
