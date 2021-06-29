@@ -190,3 +190,11 @@
 	path = extensions/Popups
 	url = git@github.com:wikimedia/mediawiki-extensions-Popups.git
 	branch = REL1_34
+[submodule "extensions/Tabs"]
+	path = extensions/Tabs
+	url = git@github.com:wikimedia/mediawiki-extensions-Tabs.git
+	branch = REL1_34
+[submodule "extensions/TemplateStyles"]
+	path = extensions/TemplateStyles
+	url = git@github.com:wikimedia/mediawiki-extensions-TemplateStyles.git
+	branch = REL1_34
