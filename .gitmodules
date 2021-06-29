@@ -137,3 +137,7 @@
 	path = extensions/Graph
 	url = git@github.com:wikimedia/mediawiki-extensions-Graph.git
 	branch = REL1_34
+[submodule "extensions/HeaderTabs"]
+	path = extensions/HeaderTabs
+	url = git@github.com:wikimedia/mediawiki-extensions-HeaderTabs.git
+	branch = REL1_34
