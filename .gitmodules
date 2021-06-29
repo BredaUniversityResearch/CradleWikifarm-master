@@ -156,3 +156,7 @@
 	path = extensions/JsonConfig
 	url = git@github.com:wikimedia/mediawiki-extensions-JsonConfig.git
 	branch = REL1_34
+[submodule "extensions/Kartographer"]
+	path = extensions/Kartographer
+	url = git@github.com:wikimedia/mediawiki-extensions-Kartographer.git
+	branch = REL1_34
