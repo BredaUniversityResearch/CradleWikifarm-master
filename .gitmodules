@@ -152,3 +152,7 @@
 	path = extensions/intersection
 	url = git@github.com:wikimedia/mediawiki-extensions-intersection.git
 	branch = REL1_34
+[submodule "extensions/JsonConfig"]
+	path = extensions/JsonConfig
+	url = git@github.com:wikimedia/mediawiki-extensions-JsonConfig.git
+	branch = REL1_34
