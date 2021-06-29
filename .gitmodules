@@ -114,3 +114,7 @@
 	path = vendor
 	url = https://gerrit.wikimedia.org/r/mediawiki/vendor
 	branch = REL1_34
+[submodule "extensions/AccessControl"]
+	path = extensions/AccessControl
+	url = git@github.com:wikimedia/mediawiki-extensions-AccessControl.git
+	branch = REL1_34
