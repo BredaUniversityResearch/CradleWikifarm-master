@@ -19,7 +19,6 @@ class PluggableAuth extends PluggableAuthBase {
 
     $url = 'https://auth.mspchallenge.info/usersc/plugins/apibuilder/authmsp/checkuser.php';
   	$arraySend = array (
-  			"key" => "Y3ORA-MIRY0-5E396-D0FEC-86B",
   			"username" => $username,
   			"password" => $password);
   	$data2send = json_encode($arraySend);
@@ -40,10 +39,6 @@ class PluggableAuth extends PluggableAuthBase {
         $email = $resultDecoded->userdata->email;
         return true;
     }
-    //$realname = $username;
-    //$email = "h.j.g.warmelink@gmail.com";
-    //$id = null;
-    //return true;
     return false;
   }
 
