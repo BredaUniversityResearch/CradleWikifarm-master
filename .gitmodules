@@ -168,3 +168,6 @@
 	path = extensions/Math
 	url = git@github.com:wikimedia/mediawiki-extensions-Math.git
 	branch = REL1_34
+[submodule "extensions/MetaDescriptionTag"]
+	path = extensions/MetaDescriptionTag
+	url = git@github.com:kolzchut/mediawiki-extensions-MetaDescriptionTag.git
