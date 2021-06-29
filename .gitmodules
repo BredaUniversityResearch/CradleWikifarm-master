@@ -148,3 +148,7 @@
 [submodule "extensions/InteractiveTimeline"]
 	path = extensions/InteractiveTimeline
 	url = git@github.com:TheWatcher/InteractiveTimeline.git
+[submodule "extensions/intersection"]
+	path = extensions/intersection
+	url = git@github.com:wikimedia/mediawiki-extensions-intersection.git
+	branch = REL1_34
