@@ -182,3 +182,7 @@
 [submodule "extensions/PDFEmbed"]
 	path = extensions/PDFEmbed
 	url = git@github.com:WolfgangFahl/PDFEmbed.git
+[submodule "extensions/PluggableAuth"]
+	path = extensions/PluggableAuth
+	url = git@github.com:wikimedia/mediawiki-extensions-PluggableAuth.git
+	branch = REL1_34
