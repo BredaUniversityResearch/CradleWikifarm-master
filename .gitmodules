@@ -198,3 +198,7 @@
 	path = extensions/TemplateStyles
 	url = git@github.com:wikimedia/mediawiki-extensions-TemplateStyles.git
 	branch = REL1_34
+[submodule "extensions/TemplateData"]
+	path = extensions/TemplateData
+	url = git@github.com:wikimedia/mediawiki-extensions-TemplateData.git
+	branch = REL1_34
