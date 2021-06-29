@@ -126,3 +126,7 @@
 	path = extensions/Comments
 	url = git@github.com:wikimedia/mediawiki-extensions-Comments.git
 	branch = REL1_34
+[submodule "extensions/Editcount"]
+	path = extensions/Editcount
+	url = git@github.com:wikimedia/mediawiki-extensions-Editcount.git
+	branch = REL1_34
