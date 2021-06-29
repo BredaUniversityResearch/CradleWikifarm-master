@@ -133,3 +133,7 @@
 [submodule "extensions/EmbedVideo"]
 	path = extensions/EmbedVideo
 	url = git@github.com:StarCitizenWiki/mediawiki-extensions-EmbedVideo.git
+[submodule "extensions/Graph"]
+	path = extensions/Graph
+	url = git@github.com:wikimedia/mediawiki-extensions-Graph.git
+	branch = REL1_34
