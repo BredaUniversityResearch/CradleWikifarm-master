@@ -141,3 +141,7 @@
 	path = extensions/HeaderTabs
 	url = git@github.com:wikimedia/mediawiki-extensions-HeaderTabs.git
 	branch = REL1_34
+[submodule "extensions/HitCounters"]
+	path = extensions/HitCounters
+	url = git@github.com:wikimedia/mediawiki-extensions-HitCounters.git
+	branch = REL1_34
