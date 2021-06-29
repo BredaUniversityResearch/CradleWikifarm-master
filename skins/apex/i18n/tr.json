@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mavrikant",
+			"Vito Genovese"
+		]
+	},
+	"apex-action-delete": "Sil",
+	"apex-action-move": "Taşı",
+	"apex-action-protect": "Koru",
+	"apex-action-undelete": "Silinmeyi geri al",
+	"apex-action-unprotect": "Korumayı değiştir",
+	"apex-view-edit": "Düzenle",
+	"apex-view-view": "Oku"
+}

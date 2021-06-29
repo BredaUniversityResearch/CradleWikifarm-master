@@ -1,0 +1,15 @@
+language: php
+
+php:
+  - 7
+  - 7.1
+  - 7.2
+  - nightly
+  
+sudo: false
+
+install:
+  - travis_retry composer update --no-progress --prefer-dist --profile
+
+script:
+  - composer test

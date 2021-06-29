@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Maroen1990",
+			"علاء",
+			"زكريا",
+			"ديفيد"
+		]
+	},
+	"apex-desc": "النسخة الحديثة من فكتور بمظهر جديدة والعديد من تحسينات الاستخدام",
+	"apex-action-addsection": "أضف موضوعاً",
+	"apex-action-delete": "احذف",
+	"apex-action-move": "انقل",
+	"apex-action-protect": "حماية",
+	"apex-action-undelete": "ألغ الحذف",
+	"apex-action-unprotect": "غير الحماية",
+	"apex-view-create": "أنشئ",
+	"apex-view-edit": "تعديل",
+	"apex-view-history": "التاريخ",
+	"apex-view-view": "اقرأ",
+	"apex-view-viewsource": "اعرض المصدر"
+}
