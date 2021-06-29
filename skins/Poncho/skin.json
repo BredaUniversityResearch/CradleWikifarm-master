@@ -1,0 +1,39 @@
+{
+	"manifest_version": 1,
+	"name": "Poncho",
+	"version": "1.4",
+	"author": "[https://mediawiki.org/wiki/User:Sophivorus Felipe Schenone]",
+	"descriptionmsg": "poncho-desc",
+	"type": "skin",
+	"license-name": "GPL-3.0-only",
+	"MessagesDirs": {
+		"Poncho": [
+			"i18n"
+		]
+	},
+	"ValidSkinNames": {
+		"poncho": "Poncho"
+	},
+	"AutoloadClasses": {
+		"SkinPoncho": "Poncho.php",
+		"PonchoTemplate": "Poncho.php"
+	},
+	"ResourceModules": {
+		"skins.poncho.styles": {
+			"styles": "Poncho.css"
+		},
+		"skins.poncho": {
+			"scripts": "Poncho.js",
+			"dependencies": [
+				"oojs-ui"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "Poncho"
+	},
+	"Hooks": {
+		"BeforePageDisplay": "SkinPoncho::onBeforePageDisplay"
+	}
+}
