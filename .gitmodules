@@ -175,3 +175,7 @@
 	path = extensions/Moderation
 	url = git@github.com:edwardspec/mediawiki-moderation.git
 	branch = REL1_27
+[submodule "extensions/NSFileRepo"]
+	path = extensions/NSFileRepo
+	url = git@github.com:wikimedia/mediawiki-extensions-NSFileRepo.git
+	branch = REL1_34
