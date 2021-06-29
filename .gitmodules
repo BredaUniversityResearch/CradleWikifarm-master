@@ -206,3 +206,7 @@
 	path = extensions/UserMerge
 	url = git@github.com:wikimedia/mediawiki-extensions-UserMerge.git
 	branch = REL1_34
+[submodule "extensions/VisualEditor"]
+	path = extensions/VisualEditor
+	url = git@github.com:wikimedia/mediawiki-extensions-VisualEditor.git
+	branch = REL1_34
