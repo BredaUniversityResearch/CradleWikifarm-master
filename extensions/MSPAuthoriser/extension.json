@@ -2,7 +2,7 @@
 	"name": "MSPAuthoriser",
 	"author": "Harald Warmelink & Dragomir Mitev",
 	"url": "",
-	"description": "This extension makes your wiki use the https://auth.mspchallenge.info API for logging users in and redirecting users for account registration.",
+	"description": "This extension makes your wiki use the https://auth.mspchallenge.info API for logging users in and redirecting users for account registration. It also makes MediaWiki use the Gmail API to send e-mails.",
 	"version": "1.0",
 	"license-name": "GPL-2.0-or-later",
 	"type": "other",
@@ -16,7 +16,8 @@
 		]
 	},
 	"Hooks": {
-		"PersonalUrls": "MediaWiki\\Extension\\MSPAuthoriser\\Hooks::onPersonalUrls"
+		"PersonalUrls": "MediaWiki\\Extension\\MSPAuthoriser\\Hooks::onPersonalUrls",
+		"AlternateUserMailer": "MediaWiki\\Extension\\MSPAuthoriser\\Hooks::onAlternateUserMailer"
 	},
 	"config": {
 		"PluggableAuth_Class": {
@@ -33,5 +34,8 @@
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
 		"remoteExtPath": "MSPAuthoriser"
+	},
+	"SpecialPages": {
+		"GmailAPIPermission": "SpecialGmailAPIPermission"
 	}
 }

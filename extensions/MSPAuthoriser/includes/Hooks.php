@@ -29,4 +29,19 @@ class Hooks {
     return true;
   }
 
+  public static function onAlternateUserMailer( $headers, $to, $from, $subject, $body ) {
+    // $headers array
+    // $to MailAddress object or array
+    // $from string
+    // $subject string
+    // $body string
+    $mailer = new GmailAPIMailer;
+    $mailer->headers = $headers;
+    $mailer->to = [$to->address => $to->name];
+    $mailer->from = $from;
+    $mailer->subject = $subject;
+    $mailer->body = $body;
+    $mailer->Send();
+  }
+
 }
