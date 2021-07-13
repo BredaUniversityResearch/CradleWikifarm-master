@@ -1,4 +1,5 @@
 <?php
+namespace MediaWiki\Extension\MSPAuthoriser;
 
 class GmailAPIMailer {
 	/* 
@@ -11,15 +12,15 @@ class GmailAPIMailer {
 	public $adapter, $headers, $subject, $body, $to, $from;
 
 	public function __construct() {
-		$lb = MediaWikiServices::getInstance()->getDBLoadBalancer();
-		$this->_db = $lb->getConnectionRef( DB_REPLICA );
+		$lb = \MediaWiki\MediaWikiServices::getInstance()->getDBLoadBalancer();
+		$this->_db = $lb->getConnectionRef( DB_MASTER );
 
 		// all below should and can be changed/configured
-		$this->_username = 'webmaster@mspchallenge.org';
-		$this->_client_id = '850011550167-8i4hb4ji0shajdg3qu23u4j4bm1ubkd4.apps.googleusercontent.com';
-		$this->_client_secret = '2Mg6ZaMZr4a72TjPMEaDW6cM';
+		$this->_username = 'CHANGEME';
+		$this->_client_id = 'CHANGEME.apps.googleusercontent.com';
+		$this->_client_secret = 'CHANGEME';
 		$this->_config = [
-			'callback' => 'http://localhost:8000/usersc/gmailcallback.php',
+			'callback' => 'http://CHANGEME/index.php/Special:GmailAPIPermission',
 			'keys'     => [
 							'id' => $this->_client_id,
 							'secret' => $this->_client_secret
@@ -30,7 +31,7 @@ class GmailAPIMailer {
 					'access_type' => 'offline'
 			]
 		];
-		$this->adapter = new Hybridauth\Provider\Google($this->_config);
+		$this->adapter = new \Hybridauth\Provider\Google($this->_config);
 	}
 
 	public function Send() {
@@ -42,20 +43,19 @@ class GmailAPIMailer {
 		if (is_string($this->to)) $this->to = array($this->to => $this->to);
 	
 		try {
-			$transport = (new Swift_SmtpTransport('smtp.googlemail.com', 465, 'ssl'))
+			$transport = (new \Swift_SmtpTransport('smtp.googlemail.com', 465, 'ssl'))
 				->setAuthMode('XOAUTH2')
 				->setUsername($this->_username)
 				->setPassword($this->getAccessToken());
 	
 			// Create the Mailer using your created Transport
-			$mailer = new Swift_Mailer($transport);
+			$mailer = new \Swift_Mailer($transport);
 	
 			// Create a message
-			$message = (new Swift_Message($this->subject))
+			$message = (new \Swift_Message($this->subject))
 				->setFrom($this->from)
 				->setTo($this->to)
 				->setBody($this->body)
-				->addParameterizedHeader($this->headers)
 				->setContentType('text/html');
 	
 			// Send the message
@@ -85,7 +85,7 @@ class GmailAPIMailer {
 	}
 
 	public function isTokenEmpty() {
-		$count = $this->_db->selectRowCount("google_oauth", " *", ["provider" => "google"]); //"SELECT * FROM google_oauth WHERE provider = 'google'"
+		$count = $this->_db->selectRowCount("google_oauth", "*", "provider = 'google'"); //"SELECT * FROM google_oauth WHERE provider = 'google'"
         if($count > 0) {
             return false;
         }

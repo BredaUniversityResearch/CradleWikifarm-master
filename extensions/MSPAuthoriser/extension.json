@@ -10,6 +10,9 @@
  	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\MSPAuthoriser\\": "includes/"
 	},
+	"AutoloadClasses": {
+		"SpecialGmailAPIPermission": "src/Special.php"
+	},
   	"MessagesDirs": {
 		"MSPAuthoriser": [
 			"i18n"
