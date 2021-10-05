@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Harald"
+		]
+	},
+	"mspauthoriser": "The name of the extension's entry in Special:SpecialPages",
+	"mspauthoriser-desc": "{{desc}}",
+	"mspauthoriser-summary": "Description appearing on top of Special:MyExtension.",
+	"exeuploadsysoponly": "Only administrators are allowed to upload those kinds of files."
+}
