@@ -10,17 +10,14 @@ use User;
 class PluggableAuth extends PluggableAuthBase {
 
   public function authenticate( &$id, &$username, &$realname, &$email, &$errorMessage ) {
+    global $wgServer;
     $authManager = MediaWikiServices::getInstance()->getAuthManager();
-    $extraLoginFields = $authManager->getAuthenticationSessionData(
-      PluggableAuthLogin::EXTRALOGINFIELDS_SESSION_KEY
-    );
-    $username = $extraLoginFields["username"];
-    $password = $extraLoginFields["password"];
+    $jwt = $authManager->getAuthenticationSessionData("jwt");
 
-    $url = 'https://auth.mspchallenge.info/usersc/plugins/apibuilder/authmsp/checkuser.php';
+    $url = 'https://auth.mspchallenge.info/usersc/plugins/apibuilder/authmsp/checkjwt.php';
   	$arraySend = array (
-  			"username" => $username,
-  			"password" => $password);
+  			"jwt" => $jwt,
+  			"audience" => "http://localhost");
   	$data2send = json_encode($arraySend);
   	$curl = curl_init();
   	curl_setopt($curl, CURLOPT_URL, $url);
@@ -32,14 +29,13 @@ class PluggableAuth extends PluggableAuthBase {
   	$resultDecoded = json_decode($result);
     
   	if($resultDecoded->success) {
+        $username = $resultDecoded->userdata->username;
         $checklocaluser = User::newFromName( $username );
         $id = $checklocaluser->getId();
-        //die(var_dump($id));
         if ($id == 0) {
           $id = null; // this is what PluggableAuth really wants, apparently
         }
-        $realname = $resultDecoded->userdata->fname." ".$resultDecoded->userdata->lname;
-        $username = $resultDecoded->userdata->username;
+        $realname = $resultDecoded->userdata->fname." ".$resultDecoded->userdata->lname;        
         $email = $resultDecoded->userdata->email;
         return true;
     }

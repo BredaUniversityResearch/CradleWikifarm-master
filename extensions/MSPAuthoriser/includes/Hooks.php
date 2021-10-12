@@ -22,9 +22,13 @@ namespace MediaWiki\Extension\MSPAuthoriser;
 class Hooks {
 
   public static function onPersonalUrls( array &$personal_urls, \Title $title ) {
+    global $wgServer;
     if (!isset($personal_urls['logout'])) {
-      $personal_urls['createaccount']['text'] = 'Join!';
-      $personal_urls['createaccount']['href'] = 'https://auth.mspchallenge.info/users/join.php?return_url='.htmlentities('https://community.mspchallenge.info');
+      $personal_urls['createaccount']['text'] = 'Create account';
+      $personal_urls['createaccount']['href'] = 'https://auth.mspchallenge.info/users/join.php?return_url='.urlencode($wgServer);
+      $personal_urls['login']['text'] = 'Log in';
+      $personal_urls['login']['href'] = 'https://auth.mspchallenge.info/users/sso.php?redirect='.urlencode($wgServer)."/index.php/Special:UserLogin";
+      // login should also be changed? and return to Special:UserLogin? I guess...? 
     }
     return true;
   }

@@ -34,7 +34,7 @@ class SpecialGmailAPIPermission extends SpecialPage {
         $mailer = new \MediaWiki\Extension\MSPAuthoriser\GmailAPIMailer;
         $mailer->headers = [];
         $mailer->to = ["warmelink.h@buas.nl" => "Harald Warmelink"];
-        $mailer->from = "webmaster@mspchallenge.info";
+        $mailer->from = "webmaster@mspchallenge.org";
         $mailer->subject = "test mail automatically sent";
         $mailer->body = "test mail sent through Special:GmailAPIPermission. if you receive this, then the Gmail API was successfully used to send an email! yay!";
         $mailer->Send();

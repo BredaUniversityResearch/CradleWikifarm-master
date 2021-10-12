@@ -14,13 +14,19 @@ class GmailAPIMailer {
 	public function __construct() {
 		$lb = \MediaWiki\MediaWikiServices::getInstance()->getDBLoadBalancer();
 		$this->_db = $lb->getConnectionRef( DB_MASTER );
+		$this->_db->query("CREATE TABLE IF NOT EXISTS `google_oauth` (
+            `id` int(11) NOT NULL AUTO_INCREMENT,
+            `provider` varchar(255) NOT NULL,
+            `provider_value` text NOT NULL,
+            PRIMARY KEY (`id`)
+           ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;");
 
 		// all below should and can be changed/configured
-		$this->_username = 'CHANGEME';
-		$this->_client_id = 'CHANGEME.apps.googleusercontent.com';
-		$this->_client_secret = 'CHANGEME';
+		$this->_username = 'webmaster@mspchallenge.org';
+		$this->_client_id = '850011550167-8i4hb4ji0shajdg3qu23u4j4bm1ubkd4.apps.googleusercontent.com';
+		$this->_client_secret = '2Mg6ZaMZr4a72TjPMEaDW6cM';
 		$this->_config = [
-			'callback' => 'http://CHANGEME/index.php/Special:GmailAPIPermission',
+			'callback' => 'https://community.mspchallenge.info/index.php/Special:GmailAPIPermission',
 			'keys'     => [
 							'id' => $this->_client_id,
 							'secret' => $this->_client_secret
